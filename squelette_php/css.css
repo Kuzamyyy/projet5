@@ -1,0 +1,71 @@
+body {
+    
+    font-family: 'Burbank Big', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: url(https://i.pinimg.com/originals/1e/ef/c5/1eefc5567dc5c55f67ef6849b9235582.jpg) no-repeat;
+}
+
+h1 {
+    color: white;
+    font-family: 'Burbank Big', sans-serif;
+}
+
+div {
+    justify-content: initial;
+}
+
+.white-text {
+    color: white;
+    height: 200px;
+    line-height: 200px;
+    font-size: 5em;
+}
+
+.checkbox-group {
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+}
+
+label {
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #777;
+    border-radius: 4px;
+}
+
+input[type="checkbox"]:checked + .checkmark:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #777;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
